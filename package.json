@@ -16,6 +16,7 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
+    "json-start": "json-server db.json -p 3001",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
