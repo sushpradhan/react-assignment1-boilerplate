@@ -21,7 +21,7 @@ const useStyles = makeStyles(() =>
 const Footer = () => {
     const classes = useStyles();
     return (<div className={classes.footerStyle}>
-        nikal lwde
+        Welcome
     </div>);
 }
 
