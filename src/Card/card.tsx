@@ -10,52 +10,50 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 
 
-const useStyles=makeStyles({
+const useStyles = makeStyles({
 
-    root:{
-        maxWidth:345,
+    root: {
+        maxWidth: 345,
     },
-    media:{
-        height:140,
+    media: {
+        height: 140,
     },
-    pos:{
-        marginBottom:12,
+    pos: {
+        marginBottom: 12,
     },
 });
-export default function NewsCard(this:any,props:any)
-{
-    const classes=useStyles()
-    const onReadLaterClickHandler=(id:any)=>{
+export default function NewsCard(this: any, props: any) {
+    const classes = useStyles()
+    const onReadLaterClickHandler = (id: any) => {
         props.onReadLaterClick(id)
     }
 
-    return(
+    return (
         <MaterialUiCard className={classes.root}>
-          <CardActionArea>
-<CardMedia 
-className={classes.media}
-image={props.image}
-title={props.title}
+            <CardActionArea>
+                <CardMedia
+                    className={classes.media}
+                    image={props.news.urlToImage}
+                    title={props.news.title}
 
->
+                >
 
-</CardMedia>
-           <CardContent>
-               <Typograpghy gutterBottom variant="h5" component="h2" >
-               {props.title}
-               </Typograpghy>
-               <Typograpghy className={classes.pos} color="textSecondary"  >
-                {props.author}
-               </Typograpghy>
-               <Typograpghy variant="body2" color="textSecondary" component="h2" >
-                {props.description}
-               </Typograpghy>
-           </CardContent>
-
-          </CardActionArea>
-          <CardActions>
-              <Button size="small" color="primary" onClick={onReadLaterClickHandler}>Read Later</Button>
-          </CardActions>
+                </CardMedia>
+                <CardContent>
+                    <Typograpghy gutterBottom variant="h5" component="h2">
+                        {props.title}
+                    </Typograpghy>
+                    <Typograpghy className={classes.pos} color="textSecondary"  >
+                        {props.author}
+                    </Typograpghy>
+                    <Typograpghy variant="body2" color="textSecondary" component="h2" >
+                        {props.description}
+                    </Typograpghy>
+                </CardContent>
+            </CardActionArea>
+            <CardActions>
+                <Button size="small" color="primary" onClick={onReadLaterClickHandler}>Read Later</Button>
+            </CardActions>
 
         </MaterialUiCard>
     )
