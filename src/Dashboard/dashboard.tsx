@@ -36,7 +36,7 @@ const {news}=state;
 // const OnReadLaterClick=(id:any)=>{
 //     let newsToBeReadLater=news.find(newsCard:any)=>NewsCard.source.id===id);
 //     fetch('http://localhost:3001/profile',{
-//         method:'GET',
+//         method:'POST',
 //         headers:{'Content-Type':'Application/json'},
 //         body:JSON.stringify(newsToBeReadLater)
 // }).then(res=>console.log(res.json()));
