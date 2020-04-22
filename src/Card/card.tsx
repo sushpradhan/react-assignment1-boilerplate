@@ -35,8 +35,8 @@ export default function NewsCard(this: any, props: any) {
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image={props.news.urlToImage}
-                    title={props.news.title}
+                    image={props.img}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                    title={props.title}
 
                 >
 
