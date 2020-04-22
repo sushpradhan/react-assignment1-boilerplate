@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from './Header/header'
-import Footer from './Footer/footer';
-import Dashboard from './Dashboard/dashboard';
+import Header from './Components/header/Header'
+import Footer from './Components/footer/Footer';
+import Dashboard from './Components/dashboard/Dashboard';
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Card from '../Card/card';
+import Card from '../Components/card/Card';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

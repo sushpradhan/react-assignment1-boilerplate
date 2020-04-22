@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import GridList from '@material-ui/core/Grid'
-import NewsCard from '../Card/card'
+import NewsCard from '../card/Card'
 import { makeStyles } from '@material-ui/core'
 
 
