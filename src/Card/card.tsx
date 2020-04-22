@@ -25,7 +25,9 @@ const useStyles = makeStyles({
 export default function NewsCard(this: any, props: any) {
     const classes = useStyles()
     const onReadLaterClickHandler = (id: any) => {
-        props.onReadLaterClick(id)
+        console.log("Hello");
+        console.log(id);
+        props.ReadClick(id)
     }
 
     return (
@@ -52,7 +54,7 @@ export default function NewsCard(this: any, props: any) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary" onClick={onReadLaterClickHandler}>Read Later</Button>
+                <Button size="small" color="primary" onClick={onReadLaterClickHandler.bind(this,props.id)}>Read Later</Button>
             </CardActions>
 
         </MaterialUiCard>

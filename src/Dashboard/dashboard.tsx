@@ -33,16 +33,18 @@ useEffect(()=>{
 
 const {news}=state;
 
-// const OnReadLaterClick=(id:any)=>{
-//     let newsToBeReadLater=news.find(newsCard:any)=>NewsCard.source.id===id);
-//     fetch('http://localhost:3001/profile',{
-//         method:'POST',
-//         headers:{'Content-Type':'Application/json'},
-//         body:JSON.stringify(newsToBeReadLater)
-// }).then(res=>console.log(res.json()));
+const OnReadLaterClick=(id:any)=>{
+    // n
+    let newsToBeReadLater=news.find((newsCard:any)=>newsCard.source.id===id);
+    fetch('http://localhost:3001/profile',{
+        method:'POST',
+        headers:{'Content-Type':'Application/json'},
+        body:JSON.stringify(newsToBeReadLater)
+}).then(res=>console.log(res.json()));
+}
 
 const list=news.map((item:any)=>
-    <NewsCard key = {item.id} news={item}></NewsCard>
+    <NewsCard id={item.source.id} key = {item.id} ReadClick={OnReadLaterClick} news={item}></NewsCard>
 )
 
 return (
